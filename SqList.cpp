@@ -26,20 +26,20 @@ bool ListInsert(SqList & L, int i, ElemType e)
 void ListPrint(const SqList & L)
 {
     printf("SqList length: %d\n", L.length);
-    for(int i=0; i<L.length; ++i)
-        printf("%d ", L.data[i]);
-    printf("\n");
+    for(int i=0; i<L.length-1; ++i)
+        printf("%d -> ", L.data[i]);
+    printf("%d\n", L.data[L.length-1]);
+    // printf("\n");
 }
 
 
 int main(){
     SqList m_sqlist;
-    ListInsert(m_sqlist, 0, 1);
-    ListInsert(m_sqlist, 0, 2);
-    ListInsert(m_sqlist, 0, 3);
-    ListInsert(m_sqlist, 0, 4);
+    ListInsert(m_sqlist, 1, 1);
+    ListInsert(m_sqlist, 2, 2);
+    ListInsert(m_sqlist, 3, 3);
+    ListInsert(m_sqlist, 4, 4);
     ListPrint(m_sqlist);
     return 0;
-
 }
 
